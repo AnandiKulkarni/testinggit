@@ -1,0 +1,116 @@
+{
+  "unpublishedPage": {
+    "name": "Page1",
+    "slug": "page1",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 4896,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 2610,
+          "containerStyle": "none",
+          "snapRows": 124,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 83,
+          "minHeight": 1292,
+          "dynamicTriggerPathList": [],
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Page1_JSObject1.myFun2",
+              "name": "JSObject1.myFun2",
+              "collectionId": "Page1_JSObject1",
+              "clientSideExecution": true,
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function (value1) {\n  console.log(value1);\n  Action4.setVisibility(true).then(showAlert(\"hi\"));\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Setvisibility.myFun2",
+              "name": "Setvisibility.myFun2",
+              "collectionId": "Page1_Setvisibility",
+              "clientSideExecution": true,
+              "confirmBeforeExecute": true,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  appsmith.user.email.includes(\"anandi\") ? Button1.setVisibility(true) : Button1.setVisibility(false);\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_SteDisability.func7",
+              "name": "SteDisability.func7",
+              "collectionId": "Page1_SteDisability",
+              "confirmBeforeExecute": true,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  setInterval(() => {\n    Api1.run().then(() => {\n      Button4.setDisabled(true).then(() => showAlert(\"success\")).catch(() => showAlert(\"fail\"));\n    });\n  }, 5000);\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_required.myFun3",
+              "name": "required.myFun3",
+              "collectionId": "Page1_required",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "() => {\n  try {\n    Api2.run().then(() => {\n      Select1.setRequired(true);\n      Select1.isRequired ? showAlert(\"ok\") : showAlert(\"not ok\");\n    });\n  } catch (e) {\n    console.log(e.message);\n  }\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_seturl.myFun6",
+              "name": "seturl.myFun6",
+              "collectionId": "Page1_seturl",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  const myFuncExpr = () => {\n    console.log(\"test\");\n    return Text1.isVisible;\n  };\n  let avr1 = myFuncExpr();\n  Audio1.setPlaying(avr1).then(s => showAlert(\"success\"));\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_JSObject1.fun3",
+              "name": "JSObject1.fun3",
+              "collectionId": "Page1_JSObject1",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  return new Promise((resolve, reject) => {\n    resolve(Button1.setVisibility(false));\n  });\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Page1",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": []
+  },
+  "deleted": false,
+  "gitSyncId": "646caeca5012762416f62f6b_646caeca5012762416f62f6d"
+}

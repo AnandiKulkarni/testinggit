@@ -1,0 +1,94 @@
+{
+  "unpublishedPage": {
+    "name": "tablevalidation",
+    "slug": "tablevalidation",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1150,
+          "containerStyle": "none",
+          "snapRows": 61,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 80,
+          "minHeight": 630,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "tablevalidation_Api2",
+              "name": "Api2",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "tablevalidation_JSObject1.func6",
+              "name": "JSObject1.func6",
+              "collectionId": "tablevalidation_JSObject1",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  setTimeout(() => {\n    console.log(\"hi\");\n    JSObject1.myVar1 = Api2.data.map(s => {\n      return {\n        id: s.id,\n        name: s.name\n      };\n    });\n    Table3.setData(JSObject1.myVar1);\n  }, 3000);\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "tablevalidation_Find_query1",
+              "name": "Find_query1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                " Table1.sortOrder.column ? { [Table1.sortOrder.column]: Table1.sortOrder.order !== \"desc\" ? 1 : -1 } : {}",
+                "Table1.pageSize",
+                "Table1.pageOffset",
+                "{ status: {$regex: Table1.searchText} }"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "tablevalidation_Total_record_query1",
+              "name": "Total_record_query1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "{ status: {$regex: Table1.searchText} }"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "tablevalidation",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "646caeca5012762416f62f6b_64896dde9f46ea1914f0e9bc"
+}
