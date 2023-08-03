@@ -24,8 +24,7 @@
         {
           "name": "url"
         }
-      ],
-      "isAsync": true
+      ]
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [

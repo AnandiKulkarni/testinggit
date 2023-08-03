@@ -24,8 +24,7 @@
         {
           "name": "value1"
         }
-      ],
-      "isAsync": true
+      ]
     },
     "executeOnLoad": true,
     "clientSideExecution": true,

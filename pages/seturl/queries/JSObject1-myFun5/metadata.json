@@ -24,8 +24,7 @@
         {
           "name": "var1"
         }
-      ],
-      "isAsync": true
+      ]
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
